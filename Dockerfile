@@ -10,8 +10,6 @@ RUN curl -sSL --create-dirs -o /tmp/WEB-INF/plugins/git-client.hpi http://update
   && curl -sSL --create-dirs -o /tmp/WEB-INF/plugins/role-strategy.hpi https://updates.jenkins-ci.org/latest/role-strategy.hpi \
   && cd /tmp && zip -g /usr/share/jenkins/jenkins.war WEB-INF/*/* && rm -rf /tmp/WEB-INF
 
-# TODO download sbt & sbt plugin
-
 EXPOSE 8080
 
 USER jenkins
