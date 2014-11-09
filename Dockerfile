@@ -5,6 +5,7 @@ USER root
 RUN apt-get update && apt-get -y install mysql-client
 
 RUN curl -sSL --create-dirs -o /tmp/WEB-INF/plugins/git-client.hpi http://updates.jenkins-ci.org/download/plugins/git-client/1.11.0/git-client.hpi \
+  && curl -sSL --create-dirs -o /tmp/WEB-INF/plugins/ghprb.hpi http://updates.jenkins-ci.org/download/plugins/ghprb/1.16-5/ghprb.hpi
   && curl -sSL --create-dirs -o /tmp/WEB-INF/plugins/git.hpi https://updates.jenkins-ci.org/latest/git.hpi \
   && curl -sSL --create-dirs -o /tmp/WEB-INF/plugins/sbt.hpi https://updates.jenkins-ci.org/latest/sbt.hpi \
   && curl -sSL --create-dirs -o /tmp/WEB-INF/plugins/role-strategy.hpi https://updates.jenkins-ci.org/latest/role-strategy.hpi \
