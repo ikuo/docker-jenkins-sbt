@@ -5,9 +5,17 @@ Dockerfile for Jenkins + sbt
 
 ## Deploying to Elastic Beanstalk
 
-Make a zip file containing the following files:
+Run the following and upload the generated zip file to the AWS console.
 
-- Dockerfile
-- Dockerrun.aws.json
+```
+$ ./scripts/package <version-string>
+```
 
-And upload it to the AWS console.
+Example:
+
+```
+$ ./scripts/package 0.11
+  adding: Dockerfile (deflated 62%)
+  adding: Dockerrun.aws.json (deflated 17%)
+generated jenkins-0.11.zip
+```

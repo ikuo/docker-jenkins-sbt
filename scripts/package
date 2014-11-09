@@ -1,0 +1,4 @@
+#!/bin/sh
+zipfile=jenkins-$1.zip
+zip $zipfile Dockerfile Dockerrun.aws.json
+echo generated $zipfile
